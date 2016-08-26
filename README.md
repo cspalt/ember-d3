@@ -1,26 +1,45 @@
-# Ember-d3
+# ember-d3
 
-This README outlines the details of collaborating on this Ember addon.
+`ember-d3` is a shim that allows easy integration of d3 visualizations into Ember apps. It is not intended as a widget library: visualizations are still drawn natively with d3, but this library provides handling of functionality that is common to all d3 visualizations:
+- delegation of data binding from Ember to d3 (?)
+- optional automatic sizing of visualizations to their parent element
+
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+TODO: Describe the installation process
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at http://localhost:4200.
+```
+{{viz
+  data = vizData
+  draw = drawFn
+  update = updateFn
+  autoSize = true
+}}
+```
 
-## Running Tests
+- `data` is the visualization's data, which
+- `draw` is the fn that draws the visualization on component initialization and, if `autoSize = true`, when the component's parent element's dimensions change
+- `update` is the fn that updates the visualization on changes to `data`, or used during animations
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+## Contributing
 
-## Building
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
-* `ember build`
+## History
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+TODO: Write history
+
+## Credits
+
+TODO: Write credits
+
+## License
+
+TODO: Write license
